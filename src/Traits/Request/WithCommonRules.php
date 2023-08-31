@@ -34,7 +34,7 @@ trait WithCommonRules
      */
     public function withValidator(Validator $validator): void
     {
-        if (! empty($validator->errors()->toArray())) {
+        if (! empty_validator($validator)) {
             return;
         }
 

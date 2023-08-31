@@ -52,6 +52,10 @@ abstract class FormRequest extends BaseFormRequest
      */
     public function withOnlyCommonRules(array $rules = []): array
     {
+        if (empty($rules)) {
+            return [];
+        }
+
         $commonRules = array_intersect_key($this->commonRules(), $rules);
 
         $accountTypeRules = array_intersect_key($this->getAccountTypeRules(), $rules);

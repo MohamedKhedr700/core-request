@@ -9,6 +9,8 @@ class RequestMacro
 {
     /**
      * Get only the validated data from the request.
+     *
+     * @throws UnvalidatedRequestException
      */
     public function passed(): Closure
     {

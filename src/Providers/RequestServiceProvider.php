@@ -1,6 +1,6 @@
 <?php
 
-namespace Raid\Core\Request\Http\Providers;
+namespace Raid\Core\Request\Providers;
 
 use Illuminate\Support\ServiceProvider;
 use Raid\Core\Request\Traits\Provider\WithRequestProvider;

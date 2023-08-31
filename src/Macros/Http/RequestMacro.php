@@ -1,6 +1,6 @@
 <?php
 
-namespace Raid\Core\Macros\Http;
+namespace Raid\Core\Request\Macros\Http;
 
 use Closure;
 use Raid\Core\Request\Exceptions\Request\UnvalidatedRequestException;

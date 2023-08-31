@@ -1,6 +1,6 @@
 <?php
 
-namespace Raid\Core\Request\Http\Requests\Rules;
+namespace Raid\Core\Request\Requests\Rules;
 
 use Illuminate\Validation\Validator;
 use Modules\Account\Contracts\AccountInterface;

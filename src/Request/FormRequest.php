@@ -1,6 +1,6 @@
 <?php
 
-namespace Raid\Core\Request\Http\Requests;
+namespace Raid\Core\Request\Requests;
 
 use Illuminate\Foundation\Http\FormRequest as BaseFormRequest;
 use Raid\Core\Request\Traits\Request\WithFormRequestHelper;

@@ -1,8 +1,6 @@
 <?php
 
-declare(strict_types=1);
-
-namespace Raid\Core\Request\Http\Requests\Rules;
+namespace Raid\Core\Request\Requests\Rules;
 
 use Illuminate\Validation\Validator;
 

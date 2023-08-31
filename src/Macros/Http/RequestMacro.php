@@ -10,7 +10,7 @@ class RequestMacro
     /**
      * Get only the validated data from the request.
      */
-    public function onlyValidated(): Closure
+    public function passed(): Closure
     {
         return function (): array {
             if (! method_exists($this, 'validated')) {

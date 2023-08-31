@@ -3,13 +3,13 @@
 namespace Raid\Core\Request\Requests;
 
 use Illuminate\Foundation\Http\FormRequest as BaseFormRequest;
-use Raid\Core\Request\Traits\Request\WithFormRequestHelper;
+use Raid\Core\Request\Traits\Request\WithRequestRule;
 use Raid\Core\Request\Traits\Request\WithRequestRoute;
 
 abstract class FormRequest extends BaseFormRequest
 {
-    use WithFormRequestHelper,
-        WithRequestRoute;
+    use WithRequestRoute,
+        WithRequestRule;
 
     /**
      * Determine if the user is authorized to make this request.

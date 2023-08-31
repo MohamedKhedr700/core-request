@@ -2,7 +2,7 @@
 
 namespace Raid\Core\Request\Traits\Request;
 
-trait WithFormRequestHelper
+trait WithRequestRule
 {
     /**
      * Get the pagination rules that apply to the request.

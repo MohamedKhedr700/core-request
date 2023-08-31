@@ -3,9 +3,12 @@
 namespace Raid\Core\Request\Http\Providers;
 
 use Illuminate\Support\ServiceProvider;
+use Raid\Core\Request\Traits\Provider\WithRequestProvider;
 
 class RequestServiceProvider extends ServiceProvider
 {
+    use WithRequestProvider;
+
     /**
      * The commands to be registered.
      */

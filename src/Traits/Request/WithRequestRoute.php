@@ -2,7 +2,6 @@
 
 namespace Raid\Core\Request\Traits\Request;
 
-use Raid\Core\Request\Models\Contracts\ModelInterface;
 
 trait WithRequestRoute
 {
@@ -14,7 +13,7 @@ trait WithRequestRoute
     /**
      * The route model binding.
      */
-    private static ?ModelInterface $routeModel;
+    private static ?object $routeModel;
 
     /**
      * Get route original id parameter.
@@ -31,14 +30,22 @@ trait WithRequestRoute
     /**
      * Get the route model binding.
      */
-    public function getRouteModel(): ?ModelInterface
+    public function getRouteModel(): ?object
     {
         if (! isset(static::$routeModel)) {
             $id = $this->route('id');
 
-            static::$routeModel = $id instanceof ModelInterface ? $id : null;
+            static::$routeModel = is_object($id) ? $id : null;
         }
 
         return static::$routeModel;
+    }
+
+    /**
+     * Get route parameter value.
+     */
+    public function getRoute(string $key, mixed $default = null, $original = false): mixed
+    {
+        return $original ? $this->route()->originalParameter($key, $default) : $this->route($key, $default);
     }
 }

@@ -29,7 +29,7 @@ trait WithRequestProvider
      */
     private function registerMacros(): void
     {
-        foreach (config('macro.macros', []) as $original => $mixin) {
+        foreach (config('validation.macros', []) as $original => $mixin) {
             $mixinObject = new $mixin;
 
             $original::mixin($mixinObject);

@@ -17,7 +17,6 @@ return [
         'mongo_unique' => \Raid\Core\Request\Http\Requests\Rules\MongoUniqueRule::class,
     ],
 
-
     /*
     |--------------------------------------------------------------------------
     | Application Macros

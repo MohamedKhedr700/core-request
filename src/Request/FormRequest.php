@@ -2,9 +2,7 @@
 
 namespace Raid\Core\Request\Http\Requests;
 
-use Illuminate\Contracts\Validation\Validator;
 use Illuminate\Foundation\Http\FormRequest as BaseFormRequest;
-use Illuminate\Validation\ValidationException;
 use Raid\Core\Request\Traits\Request\WithFormRequestHelper;
 use Raid\Core\Request\Traits\Request\WithRequestRoute;
 
@@ -70,7 +68,7 @@ abstract class FormRequest extends BaseFormRequest
 
             return [];
         }
-        
+
         $account = account();
 
         if (! $account) {

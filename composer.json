@@ -21,7 +21,7 @@
     },
     "autoload": {
         "psr-4": {
-            "Raid\\Core\\": "src"
+            "Raid\\Core\\Request\\": "src"
         }
     },
     "scripts": {

@@ -29,7 +29,7 @@ trait WithRequestProvider
      */
     private function registerMacros(): void
     {
-        foreach (config('validation.macros', []) as $original => $mixin) {
+        foreach (config('request.macros', []) as $original => $mixin) {
             $mixinObject = new $mixin;
 
             $original::mixin($mixinObject);
@@ -76,39 +76,5 @@ trait WithRequestProvider
         foreach (config('validation.custom_rules', []) as $rule => $class) {
             Validator::extend($rule, is_string($class) ? $class.'@passes' : $class[0].'@'.$class[1]);
         }
-    }
-
-    /**
-     * Register events.
-     */
-    private function registerEvents(): void
-    {
-        $this->registerEventsFacade();
-
-        $this->registerEventAction();
-    }
-
-    /**
-     * Register event facade.
-     */
-    private function registerEventsFacade(): void
-    {
-        $this->app->singleton(Event::facade(), config('event.event_handler'));
-    }
-
-    /**
-     * Register event action.
-     */
-    private function registerEventAction(): void
-    {
-        $this->app->bind(EventActionInterface::class, config('event.event_action_handler'));
-    }
-
-    /**
-     * Register sanctum personal access token model.
-     */
-    private function registerPersonalAccessTokenModel(): void
-    {
-        AliasLoader::getInstance()->alias(\Laravel\Sanctum\PersonalAccessToken::class, config('application.access_token_model'));
     }
 }

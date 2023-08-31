@@ -5,14 +5,15 @@ namespace Raid\Core\Request\Http\Requests\Rules;
 use Exception;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Validation\Validator;
-use Raid\Core\Request\Models\Model;
 
 class MongoUniqueRule
 {
     /**
      * The parameters.
      */
-    protected array $parameters = ['table', 'column'];
+    protected array $parameters = [
+        'table', 'column',
+    ];
 
     /**
      * Determine if the validation rule passes.
@@ -65,7 +66,7 @@ class MongoUniqueRule
     {
         return (bool) DB::table($table)
             ->where($column, $value)
-            ->where($ignoreColumn ?? Model::primaryKey(), '!=', $ignoreValue)
+            ->where('id', '!=', $ignoreValue)
             ->count();
     }
 }

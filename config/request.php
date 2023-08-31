@@ -30,6 +30,6 @@ return [
     */
 
     'macros' => [
-        Illuminate\Http\Request::class => \Raid\Core\Macros\Http\RequestMacro::class,
+        Illuminate\Http\Request::class => Raid\Core\Request\Macros\Http\RequestMacro::class,
     ],
 ];

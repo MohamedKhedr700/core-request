@@ -14,7 +14,8 @@
         "form-request"
     ],
     "require": {
-        "php": "^8.2"
+        "php": "^8.2",
+        "raid/core-command": "*"
     },
     "require-dev": {
         "laravel/pint": "^1.10"

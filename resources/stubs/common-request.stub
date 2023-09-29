@@ -1,0 +1,28 @@
+<?php
+
+namespace $NAMESPACE$;
+
+use Raid\Core\Request\Requests\FormRequest;
+
+trait $CLASS_NAME$
+{
+    /**
+     * Get the common rules for the request.
+     */
+    public function commonRules(): array
+    {
+        return [
+            //
+        ];
+    }
+
+    /**
+     * Get the common attributes for the request.
+     */
+    public function attributes(): array
+    {
+        return [
+            //
+        ];
+    }
+}

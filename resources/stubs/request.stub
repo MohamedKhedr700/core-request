@@ -1,0 +1,18 @@
+<?php
+
+namespace $NAMESPACE$;
+
+use Raid\Core\Request\Requests\FormRequest;
+
+class $CLASS_NAME$ extends FormRequest
+{
+    /**
+     * {@inheritdoc}
+     */
+    public function rules(): array
+    {
+        return [
+            //
+        ];
+    }
+}

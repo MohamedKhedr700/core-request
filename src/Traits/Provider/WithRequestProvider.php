@@ -20,7 +20,7 @@ trait WithRequestProvider
 
             $this->publishes([
                 $config => config_path(basename($config)),
-            ], 'config');
+            ], 'config-request');
         }
     }
 

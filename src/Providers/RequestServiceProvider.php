@@ -6,7 +6,7 @@ use Illuminate\Support\ServiceProvider;
 use Raid\Core\Request\Commands\CreateCommonRequestCommand;
 use Raid\Core\Request\Commands\CreateRequestCommand;
 use Raid\Core\Request\Commands\PublishRequestCommand;
-use Raid\Core\Request\Traits\Provider\WithRequestProvider;
+use Raid\Core\Request\Traits\Providers\WithRequestProvider;
 
 class RequestServiceProvider extends ServiceProvider
 {

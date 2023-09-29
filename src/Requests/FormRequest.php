@@ -3,8 +3,8 @@
 namespace Raid\Core\Request\Requests;
 
 use Illuminate\Foundation\Http\FormRequest as BaseFormRequest;
-use Raid\Core\Request\Traits\Request\WithRequestRule;
-use Raid\Core\Request\Traits\Request\WithRequestRoute;
+use Raid\Core\Request\Traits\Requests\WithRequestRoute;
+use Raid\Core\Request\Traits\Requests\WithRequestRule;
 
 abstract class FormRequest extends BaseFormRequest
 {

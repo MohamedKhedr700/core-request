@@ -1,11 +1,9 @@
 <?php
 
-namespace Raid\Core\Request\Traits\Provider;
+namespace Raid\Core\Request\Traits\Providers;
 
 use Illuminate\Foundation\AliasLoader;
 use Illuminate\Support\Facades\Validator;
-use Raid\Core\Request\Events\Contracts\EventActionInterface;
-use Raid\Core\Request\Facades\Events\Event;
 
 trait WithRequestProvider
 {

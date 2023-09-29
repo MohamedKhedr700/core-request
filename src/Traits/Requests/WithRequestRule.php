@@ -1,6 +1,6 @@
 <?php
 
-namespace Raid\Core\Request\Traits\Request;
+namespace Raid\Core\Request\Traits\Requests;
 
 trait WithRequestRule
 {

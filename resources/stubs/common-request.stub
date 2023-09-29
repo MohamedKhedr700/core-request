@@ -2,8 +2,6 @@
 
 namespace $NAMESPACE$;
 
-use Raid\Core\Request\Requests\FormRequest;
-
 trait $CLASS_NAME$
 {
     /**

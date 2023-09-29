@@ -9,9 +9,7 @@ trait $CLASS_NAME$
      */
     public function commonRules(): array
     {
-        return [
-            //
-        ];
+        return [];
     }
 
     /**
@@ -19,8 +17,6 @@ trait $CLASS_NAME$
      */
     public function attributes(): array
     {
-        return [
-            //
-        ];
+        return [];
     }
 }

@@ -48,6 +48,6 @@ class CreateRequestCommand extends CreateCommand
      */
     public function getSourceFilePath(): string
     {
-        return app_path('Http/Requests'.$this->getClassName()).'.php';
+        return app_path('Http/Requests/'.$this->getClassName()).'.php';
     }
 }

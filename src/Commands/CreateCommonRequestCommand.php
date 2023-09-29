@@ -48,6 +48,6 @@ class CreateCommonRequestCommand extends CreateCommand
      */
     public function getSourceFilePath(): string
     {
-        return app_path('Traits/Requests'.$this->getClassName()).'.php';
+        return app_path('Traits/Requests/'.$this->getClassName()).'.php';
     }
 }

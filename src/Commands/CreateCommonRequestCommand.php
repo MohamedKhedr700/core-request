@@ -38,7 +38,7 @@ class CreateCommonRequestCommand extends CreateCommand
     public function getStubVariables(): array
     {
         return [
-            'NAMESPACE' => 'App\\Traits\\Request',
+            'NAMESPACE' => 'App\\Traits\\Requests',
             'CLASS_NAME' => $this->getClassName(),
         ];
     }
@@ -48,6 +48,6 @@ class CreateCommonRequestCommand extends CreateCommand
      */
     public function getSourceFilePath(): string
     {
-        return app_path('Traits/Request/'.$this->getClassName()).'.php';
+        return app_path('Traits/Requests/'.$this->getClassName()).'.php';
     }
 }

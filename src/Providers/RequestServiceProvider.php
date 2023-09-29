@@ -29,6 +29,7 @@ class RequestServiceProvider extends ServiceProvider
         $this->registerConfig();
         $this->registerMacros();
         $this->registerHelpers();
+        $this->registerCommands();
     }
 
     /**

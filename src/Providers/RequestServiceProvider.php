@@ -3,7 +3,8 @@
 namespace Raid\Core\Request\Providers;
 
 use Illuminate\Support\ServiceProvider;
-use Raid\Core\Action\Commands\CreateRequestCommand;
+use Raid\Core\Request\Commands\CreateCommonRequestCommand;
+use Raid\Core\Request\Commands\CreateRequestCommand;
 use Raid\Core\Request\Commands\PublishRequestCommand;
 use Raid\Core\Request\Traits\Provider\WithRequestProvider;
 
@@ -16,7 +17,7 @@ class RequestServiceProvider extends ServiceProvider
      */
     protected array $commands = [
         CreateRequestCommand::class,
-        CreateRequestCommand::class,
+        CreateCommonRequestCommand::class,
         PublishRequestCommand::class,
     ];
 

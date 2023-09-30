@@ -1,6 +1,6 @@
 <?php
 
-namespace Raid\Core\Request\Traits\Providers;
+namespace Raid\Core\Request\Traits\Provider;
 
 use Illuminate\Foundation\AliasLoader;
 use Illuminate\Support\Facades\Validator;

@@ -1,6 +1,6 @@
 <?php
 
-namespace Raid\Core\Request\Traits\Requests;
+namespace Raid\Core\Request\Traits\Request;
 
 trait WithPaginationCommonRules
 {

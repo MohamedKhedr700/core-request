@@ -4,8 +4,66 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "309ea79cb82e412f30652d51e97ff571",
-    "packages": [],
+    "content-hash": "5933f8909761b3ec09c603b4c612e693",
+    "packages": [
+        {
+            "name": "raid/core-command",
+            "version": "dev-main",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/MohamedKhedr700/core-command.git",
+                "reference": "875432b6493f16e41de2b1f3bbbeb095316822a1"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/MohamedKhedr700/core-command/zipball/875432b6493f16e41de2b1f3bbbeb095316822a1",
+                "reference": "875432b6493f16e41de2b1f3bbbeb095316822a1",
+                "shasum": ""
+            },
+            "require": {
+                "php": "^8.2"
+            },
+            "require-dev": {
+                "laravel/pint": "^1.10"
+            },
+            "default-branch": true,
+            "type": "library",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "Raid\\Core\\Command\\Providers\\CommandServiceProvider"
+                    ]
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Raid\\Core\\Command\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "mohamed_khedr",
+                    "email": "mohamedkhedr700@gmail.com"
+                }
+            ],
+            "description": "Raid Core Command Package",
+            "keywords": [
+                "command",
+                "core",
+                "laravel",
+                "raid"
+            ],
+            "support": {
+                "issues": "https://github.com/MohamedKhedr700/core-command/issues",
+                "source": "https://github.com/MohamedKhedr700/core-command/tree/main"
+            },
+            "time": "2023-09-30T15:30:23+00:00"
+        }
+    ],
     "packages-dev": [
         {
             "name": "laravel/pint",

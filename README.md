@@ -188,10 +188,6 @@ Remember that all the common rules will be inherited by all the requests that us
 To only merge the common rules with the request rules, you can use the `withOnlyCommonRules` method.
 
 ``` php
-
-We have another method called `withOnlyCommonRules` which is responsible for merging only the given key with the common rules for that key.
-
-``` php
 <?php
 
 namespace App\Http\Requests;

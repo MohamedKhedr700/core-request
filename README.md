@@ -26,7 +26,7 @@ class CreateUserRequest extends FormRequest
     use WithUserCommonRules;
 
     /**
-     * {@inheritdoc}
+     * Get the validation rules that apply to the request.
      */
     public function rules(): array
     {
@@ -51,7 +51,7 @@ use Raid\Core\Request\Requests\FormRequest;
 class CreateUserRequest extends FormRequest
 {
     /**
-     * {@inheritdoc}
+     * Get the validation rules that apply to the request.
      */
     public function rules(): array
     {
@@ -76,7 +76,7 @@ namespace App\Traits\Request;
 trait WithUserCommonRules
 {
     /**
-     * Get the common rules for the user.
+     * Get the common rules for the request.
      */
     public function commonRules(): array
     {
@@ -84,7 +84,7 @@ trait WithUserCommonRules
     }
 
     /**
-     * Get the common attributes for the user.
+     * Get the common attributes for the request.
      */
     public function attributes(): array
     {
@@ -142,7 +142,7 @@ class CreateUserRequest extends FormRequest
     use WithUserCommonRules;
 
     /**
-     * {@inheritdoc}
+     * Get the validation rules that apply to the request.
      */
     public function rules(): array
     {
@@ -166,7 +166,7 @@ class UpdateUserRequest extends FormRequest
     use WithUserCommonRules;
 
     /**
-     * {@inheritdoc}
+     * Get the validation rules that apply to the request.
      */
     public function rules(): array
     {
@@ -204,7 +204,7 @@ class CreateUserRequest extends FormRequest
     use WithUserCommonRules;
 
     /**
-     * {@inheritdoc}
+     * Get the validation rules that apply to the request.
      */
     public function rules(): array
     {

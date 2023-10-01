@@ -7,7 +7,7 @@ use Raid\Core\Request\Requests\FormRequest;
 class $CLASS_NAME$ extends FormRequest
 {
     /**
-     * {@inheritdoc}
+     * Get the validation rules that apply to the request.
      */
     public function rules(): array
     {

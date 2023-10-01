@@ -211,7 +211,7 @@ class CreateUserRequest extends FormRequest
 }
 ```
 
-This will merge only the name rules with the common rules for name, and ignore all other common rules.
+This will merge only the name rules with the common rules for name, and ignore all other common rules defined.
 
 And that's it.
 

@@ -62,7 +62,9 @@ class CreateUserRequest extends FormRequest
 
 This looks like a normal request class, but it's not it just needs some helper.
 
-Let's create our `common-rules-request` trait.
+The request class MUST extend the `FormRequest` class.
+
+Now, let's create our `common-rules-request` trait.
 
 you can use the command `php artisan core:make-common-request WithUserCommonRules` to create the common request trait.
 
@@ -91,11 +93,9 @@ trait WithUserCommonRules
 }
 ```
 
-The `commonRules` method is responsible for returning the common rules for the requests.
+The `commonRules` method is responsible for returning the common rules for the request.
 
-you can define the rules that are common for your requests and only the rules,
-never-mind about the keys as we will see later.
-
+you can define the rules that are common for your request and their attributes.
 ``` php
 <?php
 
@@ -125,9 +125,7 @@ trait WithUserCommonRules
 }
 ```
 
-Here we have defined only common rules for name, and that will be inherited by all requests that use this trait.
 
-We also can define the unique rules for the request for same attribute.
 
 Now let's go back to our request classes.
 
@@ -179,11 +177,17 @@ class UpdateUserRequest extends FormRequest
 }
 ```
 
-Now both requests inherit the common rules and attributes for name and all the common rules defined, and each one has its own rules as well.
+Now both requests inherit the common rules and attributes for all the common rules defined, and each one has its own rules as well.
 
 The `withCommonRules` method is responsible for merging the common rules with the request rules.
 
 The `withCommonRules` method accepts an array of rules, and it will merge it with the common rules.
+
+Remember that all the common rules will be inherited by all the requests that use the common rules' trait.
+
+To only merge the common rules with the request rules, you can use the `withOnlyCommonRules` method.
+
+``` php
 
 We have another method called `withOnlyCommonRules` which is responsible for merging only the given key with the common rules for that key.
 
@@ -211,7 +215,7 @@ class CreateUserRequest extends FormRequest
 }
 ```
 
-This will merge only the name rules with the common rules for name, and ignore all other common keys if defined.
+This will merge only the name rules with the common rules for name, and ignore all other common rules.
 
 And that's it.
 

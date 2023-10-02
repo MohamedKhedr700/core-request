@@ -221,7 +221,7 @@ The MIT License (MIT). Please see [License File](LICENSE.md) for more informatio
 
 ## Credits
 
-- [MohamedKhedr]()
+- **[Mohamed Khedr](https://github.com/MohamedKhedr700)**
 
 ## Security
 
@@ -230,8 +230,9 @@ instead of using the issue tracker.
 
 ## About Raid
 
-Raid is a PHP framework created by [MohamedKhedr700]()
-and is maintained by [MohamedKhedr700]().
+Raid is a PHP framework created by **[Mohamed Khedr](https://github.com/MohamedKhedr700)**
+
+and it is maintained by **[Mohamed Khedr](https://github.com/MohamedKhedr700)**.
 
 ## Support Raid
 

@@ -12,9 +12,9 @@ return [
     */
 
     'custom_rules' => [
-        'localized' => \Raid\Core\Request\Http\Requests\Rules\LocalizedRule::class,
-        'matching_password' => \Raid\Core\Request\Http\Requests\Rules\MatchingPasswordRule::class,
-        'mongo_unique' => \Raid\Core\Request\Http\Requests\Rules\MongoUniqueRule::class,
+        'localized' => \Raid\Core\Request\Requests\Rules\LocalizedRule::class,
+        'matching_password' => \Raid\Core\Request\Requests\Rules\MatchingPasswordRule::class,
+        'mongo_unique' => \Raid\Core\Request\Requests\Rules\MongoUniqueRule::class,
     ],
 
     /*

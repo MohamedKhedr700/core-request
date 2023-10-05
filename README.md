@@ -39,7 +39,11 @@ class CreateUserRequest extends FormRequest
 
 Let's start with our request class `CreateUserRequest`.
 
-you can use the command `php artisan core:make-request CreateUserRequest` to create the request class.
+you can use the command to create the request class.
+
+``` bash
+php artisan core:make-request CreateUserRequest
+```
 
 ``` php
 <?php
@@ -66,7 +70,11 @@ The request class MUST extend the `FormRequest` class.
 
 Now, let's create our `common-rules-request` trait.
 
-you can use the command `php artisan core:make-common-request WithUserCommonRules` to create the common request trait.
+you can use the command to create the common request trait.
+
+``` bash
+php artisan core:make-common-request WithUserCommonRules
+```
 
 ``` php
 <?php
@@ -125,7 +133,9 @@ trait WithUserCommonRules
 }
 ```
 
+<br>
 
+### With Common Rules
 
 Now let's go back to our request classes.
 
@@ -185,6 +195,10 @@ The `withCommonRules` method accepts an array of rules, and it will merge it wit
 
 Remember that all the common rules will be inherited by all the requests that use the common rules' trait.
 
+<br>
+
+### With Only Common Rules
+
 To only merge the common rules with the request rules, you can use the `withOnlyCommonRules` method.
 
 ``` php
@@ -210,6 +224,8 @@ class CreateUserRequest extends FormRequest
     }
 }
 ```
+
+The `withOnlyCommonRules` method is responsible for merging the common rules with the request rules and ignoring all other rules.
 
 This will merge only the name rules with the common rules for name, and ignore all other common rules defined.
 

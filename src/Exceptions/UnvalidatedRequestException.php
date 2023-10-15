@@ -1,6 +1,6 @@
 <?php
 
-namespace Raid\Core\Request\Exceptions\Request;
+namespace Raid\Core\Request\Exceptions;
 
 use Exception;
 

@@ -3,7 +3,7 @@
 namespace Raid\Core\Request\Macros\Http;
 
 use Closure;
-use Raid\Core\Request\Exceptions\Request\UnvalidatedRequestException;
+use Raid\Core\Request\Exceptions\UnvalidatedRequestException;
 
 class RequestMacro
 {

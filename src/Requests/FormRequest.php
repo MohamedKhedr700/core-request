@@ -73,13 +73,13 @@ abstract class FormRequest extends IlluminateFormRequest
             return [];
         }
 
-        $account = account();
+        $accountType = account()->accountType() ?? null;
 
-        if (! $account) {
+        if (! $accountType) {
             return [];
         }
 
-        $method = account()->accountType().'Rules';
+        $method = $accountType.'Rules';
 
         if (! method_exists($this, $method)) {
             return [];

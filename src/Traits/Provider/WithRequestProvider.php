@@ -71,7 +71,7 @@ trait WithRequestProvider
      */
     private function registerCustomValidationRules(): void
     {
-        foreach (config('validation.custom_rules', []) as $rule => $class) {
+        foreach (config('request.custom_rules', []) as $rule => $class) {
             Validator::extend($rule, is_string($class) ? $class.'@passes' : $class[0].'@'.$class[1]);
         }
     }

@@ -11,3 +11,13 @@ if (! function_exists('empty_validator')) {
         return empty($validator->errors()->toArray());
     }
 }
+
+if (! function_exists('check_strings_in_array')) {
+    /**
+     * Determine if each value in array is string.
+     */
+    function check_strings_in_array(array $array): bool
+    {
+        return array_sum(array_map('is_string', $array)) == count($array);
+    }
+}

@@ -12,7 +12,8 @@ trait WithRequestRule
         $mergeRules = array_merge_recursive($rules, $commonRules, $accountTypeRules);
 
         foreach ($mergeRules as $key => $value) {
-            $mergeRules[$key] = array_values(array_unique($value));
+
+            $mergeRules[$key] = check_strings_in_array($value) ? array_values(array_unique($value)) : $value;
         }
 
         return $mergeRules;
@@ -28,7 +29,7 @@ trait WithRequestRule
 
             $keyAccountTypeRules = $accountTypeRules[$key] ?? [];
 
-            $value = array_values(array_unique(array_merge($value, $keyCommonRules, $keyAccountTypeRules)));
+            $value = check_strings_in_array($value) ? array_values(array_unique(array_merge($value, $keyCommonRules, $keyAccountTypeRules))) : $value;
 
             $allRules[$key] = $value;
         });
